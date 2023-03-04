@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<body>
+   <div id="outer">
+    <div id="d1" class="my-div">&nbsp;</div>
+    <div id="d2" class="my-div">&nbsp;</div>
+    <div id="d3" class="my-div">&nbsp;</div>
+    <div id="d4" class="my-div">&nbsp;</div>
+    <div id="d5" class="my-div">&nbsp;</div>
+    <div id="d6" class="my-div">&nbsp;</div>
+  </div>
+
+  <div id="textOutput"></div>
+
+    <style>
+        .my-div {width: 25px; height: 25px;background-color:red; margin:1px;}
+      </style>     
+
+      <script>
+        function indiv(e){
+            const targetId = e.target.id
+            const message = "Hi from " + targetId
+            document.getElementById("textOutput").innerText= message
+        }
+        document.getElementById("outer").addEventListener("click", indiv, false);
+
+      </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Title</title>
+    <style>
+        .parent {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 1px 1px;
+        }
+        .item {
+            background-color: lightskyblue;
+            border: 1px solid #fff;
+            padding: 5px 5px 5px 2em;
+            min-height: 250px;
+        }
+    </style>
+</head>
+<body style="font-family: sans-serif">
+<div style="margin-left: 10%;width: 75%;margin-right: auto">
+    <h2>Car's 'R' Us Client Demo - Version poor ;-)</h2>
+    <div class="parent">
+        <div class="item">
+            <h3>Show all Cars</h3>
+            <button id="btn-get-all">Get all</button>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Brand</th><th>Model</th><th>PricePrDay</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="item">
+            <h3>Find a single Car</h3>
+            <label for="text-for-id">Id</label>&nbsp;<input id="text-for-id"/>
+            <button id="btn-get">Find</button>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Brand</th><th>Model</th><th>PricePrDay</th>
+                    </tr>
+                </thead>
+                <tbody id="found-car">
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="item">
+            <h3>Add a Car</h3>
+            <div><label for="input-brand">Brand</label>&nbsp;<input id="input-brand"/></div>
+            <div><label for="input-model">Model</label>&nbsp;<input id="input-model"/></div>
+            <div><label for="input-price">Price&nbsp;&nbsp;</label>&nbsp;<input id="input-price"/></div>
+            <button id="btn-submit">Submit new car:</button>
+            <p>What was returned:</p>
+            <p id="submit-return"></p>
+            
+        </div>
+
+        <div class="item">
+            <h3>Not implemented!!</h3>
+            <label for="text-for-id2">Id</label>&nbsp;<input id="text-for-id2"/>
+            <button>Find item to edit</button>
+            <p>Show what you find here, and let users edit fields</p>
+            <p>......</p>
+            <button>Submit edited item</button>
+            <p>Use one of the two GET pages to verify that "something" was added</p>
+        </div>
+    </div>
+</div>
+<script src="cars.js"></script>
+</body>
+</html>

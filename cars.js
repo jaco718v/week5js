@@ -3,7 +3,7 @@ document.getElementById("btn-get").onclick = getById
 document.getElementById("btn-submit").onclick = addCar
 
 //URL = "http://localhost:8080/api/cars"
-URL = "http://carsr00.azurewebsites.net/api/cars"
+URL = "https://carsr00.azurewebsites.net/api/cars"
 
 function addCar(evt){
     const brand = document.getElementById("input-brand").value
